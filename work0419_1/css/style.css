@@ -1,0 +1,32 @@
+@charset "utf-8";
+.wrap {
+    max-width: 960px;
+}
+.blue {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.blue div {
+    background: blue;
+    width: 31.25%;
+    height: 300px;
+    color: #fff;
+    text-align: center;
+    line-height: 300px;
+}
+
+.red {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.red div {
+    background: red;
+    width: 31.25%;
+    height: 300px;
+    color: #fff;
+    text-align: center;
+    line-height: 300px;
+    margin-bottom: 10px;
+}
