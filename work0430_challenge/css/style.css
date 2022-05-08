@@ -1,0 +1,272 @@
+@charset "utf-8";
+/* cssリセット */
+
+body,
+h1,
+h2,
+h3,
+ul,
+li,
+dl,
+dt,
+dd,
+p {
+  margin: 0;
+  margin: 0;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  /*デフォルトの文字色、font-familyを予め当てておく*/
+  color: #111;
+  font-family: "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "YuMincho",
+    "メイリオ", "Yu Mincho", "游明朝体", "Georgia", "PT Serif", serif;
+}
+
+a {
+  /*下線を消す*/
+  text-decoration: none;
+  /*色を消す*/
+  color: inherit;
+}
+
+ul {
+  /*左の「・」を消す*/
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+  border: none;
+}
+
+/* ここまでcssリセット */
+/* ヘッダー箇所 */
+.home {
+  margin: 60px auto;
+  max-width: 1035px;
+}
+.top-table {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 64px;
+}
+.top-title h1 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 36px;
+  font-weight: 700;
+}
+.top-title h2 {
+  font-size: 18px;
+  font-weight: lighter;
+  color: #777;
+  font-style: normal;
+  padding-top: 8px;
+}
+.top-table nav ul {
+  display: flex;
+}
+.top-table nav ul li {
+  padding-right: 24px;
+}
+.top-table nav ul li:last-child {
+  padding-right: 0;
+}
+nav {
+  margin: 0 auto;
+}
+main .header-img img {
+  display: block;
+}
+
+main .main-description {
+  font-size: 27px;
+  color: #777;
+  line-height: 1.8;
+  margin: 90px auto;
+}
+
+/* nav ul li::after { （下向き三角)
+  content: "";
+  width: 6px;
+  height: 6px;
+  margin-top: -5px;
+  border-top: solid 1px #111;
+  border-right: solid 1px #111;
+  transform: rotate(135deg);
+  position: absolute;
+  top: 50%;
+  right: -20px;
+} */
+
+/* ここから記事箇所 */
+main dl {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 64px;
+  align-items: baseline;
+}
+
+main dl dt p {
+  font-size: 16px;
+  color: #777;
+  padding-right: 240px;
+  white-space: nowrap;
+}
+dl .entry-title {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+dl dt h2 {
+  margin-bottom: 32px;
+  font-size: 22px;
+}
+dl dd {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #777;
+  /* 三点リーダー対応 */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+
+  overflow: hidden;
+}
+.page-numbers {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 160px;
+}
+.page-numbers .page-number {
+  line-height: 2;
+  border: 1px solid #ddd;
+  padding: 8px 18px;
+  margin-right: 8px;
+}
+.page-numbers .page-number:first-child {
+  background-color: #eee;
+  font-weight: 600;
+}
+
+/* フッター箇所 */
+.footer-wrap {
+  display: flex;
+  justify-content: space-between;
+  line-height: 1.7;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 120px 0;
+}
+.profile {
+  width: 43%;
+}
+.profile .profile-top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.profile .profile-icon img {
+  width: 100px;
+  border-radius: 50%;
+  margin-right: 16px;
+}
+.profile-top .profile-name {
+  font-weight: bold;
+}
+.profile .profile-widget-text {
+  color: #666;
+}
+.footer-widget-table {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 12%;
+  box-sizing: border-box;
+}
+.footer-widget-table .footer-widget1 {
+  width: 27%;
+}
+.footer-widget-table .footer-widget-title {
+  font-size: 16px;
+  padding-bottom: 32px;
+}
+.footer-wrap .footer-widget-title {
+  font-size: 14px;
+}
+
+.footer-widget1 .footer-widget1-descript {
+  line-height: 1.7;
+  color: #666;
+}
+.footer-widget-table ul li {
+  margin-bottom: 24px;
+}
+.footer-widget-table ul li a {
+  border-bottom: 1px solid #ddd;
+  color: #666;
+  font-size: 18px;
+}
+
+.footer-widget2 ul li .post-data {
+  display: block;
+  color: #999;
+  font-size: 14px;
+  margin-top: 12px;
+}
+.footer-widget-table .footer-widget3 {
+  width: 27%;
+}
+.footer-widget3 .serch-box .serch-text {
+  color: #666;
+  border: 1px solid #ddd;
+  padding: 0.6em;
+  margin-top: 80px;
+}
+
+@media screen and (max-width: 980px) {
+  .home {
+    margin: 60px 100px;
+    max-width: 980px;
+  }
+  .top-table {
+    display: block;
+  }
+  .top-table nav {
+    margin-top: 40px;
+  }
+  /* 記事箇所 */
+  main dl {
+    display: block;
+  }
+  main dl dt .time {
+    margin-bottom: 16px;
+  }
+  main .page-numbers {
+    justify-content: flex-start;
+    margin-bottom: 100px;
+  }
+  /* フッター箇所 */
+  .footer-wrap {
+    display: block;
+    padding: 100px 0;
+  }
+  .profile {
+    width: 100%;
+    margin-bottom: 80px;
+  }
+  .footer-widget-table {
+    display: block;
+    padding-left: 0;
+  }
+  .footer-widget-table .footer-widget1 {
+    width: 100%;
+    margin-bottom: 200px;
+  }
+  .footer-widget-table .footer-widget2 {
+    margin-bottom: 80px;
+  }
+  .footer-widget-table .footer-widget3 {
+    width: 50%;
+  }
+}
