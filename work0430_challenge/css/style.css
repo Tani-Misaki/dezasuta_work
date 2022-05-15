@@ -44,6 +44,7 @@ img {
 /* ヘッダー箇所 */
 .home {
   margin: 60px auto;
+  padding: 0 16px;
   max-width: 1035px;
 }
 .top-table {
@@ -87,7 +88,8 @@ main .main-description {
   margin: 90px auto;
 }
 
-/* nav ul li::after { （下向き三角)
+nav ul li::after {
+  /*（下向き三角)*/
   content: "";
   width: 6px;
   height: 6px;
@@ -95,10 +97,13 @@ main .main-description {
   border-top: solid 1px #111;
   border-right: solid 1px #111;
   transform: rotate(135deg);
-  position: absolute;
+  /* position: absolute;　サイト全体を基準とした位置取りのため不要
   top: 50%;
-  right: -20px;
-} */
+  right: -20px; */
+  display: inline-block;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
 
 /* ここから記事箇所 */
 main dl {
