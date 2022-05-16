@@ -87,13 +87,12 @@ body {
   margin-right: 0px;
 }
 
-.slider {
+.slider img {
   width: 100%;
 }
 
 /* メイン上 */
 .top_main_head {
-  max-width: 872px;
   margin: 103px auto 100px;
   text-align: center;
 }
@@ -101,7 +100,7 @@ body {
   font-size: 30px;
 }
 .top_main_head h2 {
-  font-size: 55px;
+  font-size: 82px;
   font-weight: normal;
   line-height: 1.17;
   letter-spacing: 0.1em;
@@ -117,15 +116,20 @@ body {
   justify-content: space-between;
   max-width: 1000px;
   margin: 0 auto;
+  padding: 0 10px;
+}
+.about_us_img {
+  width: 50%;
 }
 .about_us .about_us_img img {
-  width: 500px;
-  box-sizing: border-box;
   border-bottom-right-radius: 82px;
 }
 .about_us .about_us_wrap .about_us_content img {
   height: 77px;
   margin-top: 56px;
+}
+.about_us_wrap {
+  width: 41%;
 }
 .about_us .about_us_wrap .about_us_ttl {
   font-size: 44px;
@@ -135,7 +139,6 @@ body {
   margin-bottom: 35px;
 }
 .about_us .about_us_wrap p {
-  width: 410px;
   font-size: 16px;
   line-height: 1.625;
 }
@@ -150,9 +153,10 @@ body {
   justify-content: space-between;
   max-width: 1000px;
   margin: 0 auto;
+  padding: 0 10px;
 }
 .menu_wrap .menu_detail {
-  width: 300px;
+  width: 32%;
 }
 .menu_wrap .menu_detail img {
   border-top-right-radius: 41.64px;
@@ -162,6 +166,7 @@ body {
   color: #d30202;
   margin-top: -20px;
   margin-bottom: 24px;
+  padding-left: 12px;
 }
 .menu_wrap .menu_detail .menu_text {
   font-size: 17px;
@@ -173,12 +178,13 @@ body {
   margin: 65px 0 35px;
   text-align: center;
 }
-
+.event_wrap {
+  padding: 0 10px;
+}
 .event_wrap ul {
   background-color: #fff;
   border: 3px solid #4f260b;
   max-width: 1000px;
-  height: 200px;
   margin: 37px auto 42px;
 }
 .event_wrap ul li {
@@ -188,6 +194,9 @@ body {
 }
 .event_wrap ul li:first-child {
   padding-top: 38px;
+}
+.event_wrap ul li:last-child {
+  padding-bottom: 38px;
 }
 .event_wrap ul li time {
   padding-right: 54px;
@@ -214,8 +223,9 @@ body {
   display: flex;
   justify-content: space-between;
   max-width: 634px;
-  margin-left: 23.75%;
-  padding: 76px 0;
+  /* margin-left: 23.75%; */
+  margin: 0 auto;
+  padding: 76px 10px;
 }
 .footer_wrap .footer_logo img {
   height: 50px;
