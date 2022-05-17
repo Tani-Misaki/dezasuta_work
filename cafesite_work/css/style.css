@@ -114,9 +114,11 @@ body {
 .about_us {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 10px;
+  box-sizing: border-box;
 }
 .about_us_img {
   width: 50%;
@@ -126,7 +128,6 @@ body {
 }
 .about_us .about_us_wrap .about_us_content img {
   height: 77px;
-  margin-top: 56px;
 }
 .about_us_wrap {
   width: 41%;
@@ -156,7 +157,7 @@ body {
   padding: 0 10px;
 }
 .menu_wrap .menu_detail {
-  width: 32%;
+  width: 30%;
 }
 .menu_wrap .menu_detail img {
   border-top-right-radius: 41.64px;
@@ -221,14 +222,13 @@ body {
 }
 .footer_wrap {
   display: flex;
-  justify-content: space-between;
-  max-width: 634px;
-  /* margin-left: 23.75%; */
+  max-width: 1000px;
   margin: 0 auto;
   padding: 76px 10px;
 }
 .footer_wrap .footer_logo img {
   height: 50px;
+  margin-right: 60px;
 }
 .footer_info ul li {
   font-size: 20px;
