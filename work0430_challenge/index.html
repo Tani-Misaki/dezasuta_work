@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>チャレンジ課題</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </head>
   <body>
     <div class="home">
@@ -15,15 +16,32 @@
             <h1>Write</h1>
             <h2>書くためのテーマ</h2>
           </div>
-          <nav>
+          <nav class="header_nav">
             <ul>
-              <li><a href="">ホーム</a></li>
-              <li><a href="">ページ</a></li>
+              <li><a href="">ホーム<span></span></a></li>
+              <li><a href="">ページ<span></span></a></li>
               <li><a href="">タイポグラフィー</a></li>
               <li><a href="">お問い合わせ</a></li>
             </ul>
+            <span class="search_icon"></span>
           </nav>
         </div>
+        <div class="sp_btn">
+          <span></span>
+        </div>
+
+        <nav class="sp_header_nav">
+          <ul>
+            <li><a href="">ホーム</a></li>
+            <li><a href="">→カスタマイズ</a></li>
+            <li><a href="">ページ</a></li>
+            <li><a href="">アイキャッチ画像なしのページ</a></li>
+            <li><a href="">ページ&#040;全幅テンプレート&#041;</a></li>
+            <li><a href="">タイポグラフィー</a></li>
+            <li><a href="">お問い合わせ</a></li>
+          </ul>
+        </nav>
+
       </header>
       <main>
         <div class="header-img">
@@ -36,69 +54,79 @@
           Writeは文章を書く人のためのミニマルなWordPressテーマです。装飾を極限まで省いたデザインは、あなたの文章を主役にします。
         </p>
         <dl>
+          <div class="content">
           <dt><p class="time">2018年9月1日</p></dt>
           <div class="entry-title">
-            <dt><h2>書くためのテーマ</h2></dt>
+            <dt><h2><a href="">書くためのテーマ</a></h2></dt>
             <dd>
               Writeは文章を書く人のためのミニマルなWordPressテーマです。装飾を極限まで省いたデザインは、あなたの文章を主役にします。
             </dd>
           </div>
-        </dl>
-        <dl>
+        </div>
+        <div class="content">
           <dt><p class="time">2018年3月5日</p></dt>
           <div class="entry-title">
-            <dt><h2>画像付きの投稿</h2></dt>
+            <dt><h2><a href="">画像付きの投稿</a></h2></dt>
             <dd>
               吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。
             </dd>
           </div>
-        </dl>
-        <dl>
+        </div>
+
+          <div class="content">
+
           <dt><p class="time">2018年3月5日</p></dt>
           <div class="entry-title">
-            <dt><h2>引用付きの投稿</h2></dt>
+            <dt><h2><a href="">引用付きの投稿</a></h2></dt>
             <dd>
               吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。
             </dd>
           </div>
-        </dl>
-        <dl>
-          <dt><p class="time">2018年3月5日</p></dt>
+        </div>
+
+          <div class="content">
+            <dt><p class="time">2018年3月5日</p></dt>
           <div class="entry-title">
-            <dt><h2>コメント付きの投稿</h2></dt>
+            <dt><h2><a href="">コメント付きの投稿</a></h2></dt>
             <dd>
               吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。
               しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。
             </dd>
           </div>
-        </dl>
-        <dl>
-          <dt><p class="time">2018年3月3日</p></dt>
+        </div>
+
+          <div class="content">
+            <dt><p class="time">2018年3月3日</p></dt>
           <div class="entry-title">
-            <dt><h2>吾輩は猫である</h2></dt>
+            <dt><h2><a href="">吾輩は猫である</a></h2></dt>
             <dd>
               吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。
               しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。
             </dd>
           </div>
-        </dl>
-        <dl>
-          <dt><p class="time">2018年3月3日</p></dt>
+        </div>
+
+          <div class="content">
+            <dt><p class="time">2018年3月3日</p></dt>
           <div class="entry-title">
-            <dt><h2>名前はまだ無い。どこで生れたかとんと見当がつかぬ。</h2></dt>
+            <dt><h2><a href="">名前はまだ無い。どこで生れたかとんと見当がつかぬ。</a></h2></dt>
             <dd>
               吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。
               しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。
             </dd>
           </div>
+        </div>
         </dl>
         <div class="page-numbers">
-          <div class="page-number">1</div>
-          <div class="page-number">2</div>
-          <div class="page-number">3</div>
-          <div class="page-number">次へ »</div>
+          <ul>
+          <li class="page-number">1</li>
+          <li class="page-number"><a href=""> 2</a></li>
+          <li class="page-number"><a href=""> 3</a></li>
+          <li class="page-number"><a href=""> 次へ »</a></li>
+        </ul>
         </div>
       </main>
+
       <footer>
         <div class="footer-wrap">
           <div class="profile">
@@ -108,9 +136,9 @@
             </div>
             <p class="profile-name">John Doe</p>
             </div>
-            <div class="profile-widget-text">
+            <p class="profile-widget-text">
               これはプロフィールウィジェットです。ここにはプロフィール画像・名前・自己紹介文・ソーシャルリンク（最大7つ）を設定することができます。
-            </div>
+            </p>
           </div>
           <div class="footer-widget-table">
             <div class="footer-widget1">
@@ -147,10 +175,20 @@
                 <p class="serch-text">検索</p>
               </div>
             </div>
-          </div>
         </div>
       </div>
-      </footer>
+      <p class="footer_copy">Powered by WordPress | Theme: Write by Themegraphy</p>
+    </footer>
     </div>
+    </div>
+
+    <script>
+      $(function(){
+        $(".sp_btn").click(function(){
+          $(".sp_header_nav").fadeToggle();
+          $(this).toggleClass("open");
+        });
+      });
+    </script>
   </body>
 </html>

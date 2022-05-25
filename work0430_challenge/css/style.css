@@ -28,6 +28,10 @@ a {
   /*色を消す*/
   color: inherit;
 }
+a:hover {
+  color: darkgoldenrod;
+  transition: 0.3s;
+}
 
 ul {
   /*左の「・」を消す*/
@@ -69,27 +73,41 @@ img {
   display: flex;
 }
 .top-table nav ul li {
-  padding-right: 24px;
+  padding-right: 35px;
 }
 .top-table nav ul li:last-child {
   padding-right: 0;
 }
-nav {
-  margin: 0 auto;
+.search_icon {
+  background-image: url(../images/search-icon@2x.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 25px;
+  width: 25px;
 }
-main .header-img img {
+.header_nav {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  align-items: center;
+}
+.header-img img {
   display: block;
 }
 
-main .main-description {
+.main-description {
   font-size: 27px;
   color: #777;
   line-height: 1.8;
   margin: 90px auto;
 }
+.sp_header_nav,
+.sp_btn {
+  display: none;
+}
 
-nav ul li::after {
-  /*（下向き三角)*/
+/*（下向き三角)*/
+.header_nav ul li span::after {
   content: "";
   width: 6px;
   height: 6px;
@@ -97,38 +115,37 @@ nav ul li::after {
   border-top: solid 1px #111;
   border-right: solid 1px #111;
   transform: rotate(135deg);
-  /* position: absolute;　サイト全体を基準とした位置取りのため不要
-  top: 50%;
-  right: -20px; */
   display: inline-block;
   margin-left: 10px;
   margin-bottom: 5px;
 }
 
-/* ここから記事箇所 */
-main dl {
+/* 記事箇所 */
+.content {
+  display: flex;
+}
+.entry-title {
   display: flex;
   justify-content: flex-start;
   margin-bottom: 64px;
   align-items: baseline;
 }
-
-main dl dt p {
+.time {
   font-size: 16px;
   color: #777;
   padding-right: 240px;
   white-space: nowrap;
 }
-dl .entry-title {
+.entry-title {
   display: flex;
   flex-direction: column;
   align-items: left;
 }
-dl dt h2 {
+.content h2 {
   margin-bottom: 32px;
   font-size: 22px;
 }
-dl dd {
+.content dd {
   font-size: 17px;
   line-height: 1.7;
   color: #777;
@@ -139,20 +156,35 @@ dl dd {
 
   overflow: hidden;
 }
-.page-numbers {
+.page-numbers ul {
   display: flex;
   justify-content: center;
   margin-bottom: 160px;
 }
-.page-numbers .page-number {
-  line-height: 2;
-  border: 1px solid #ddd;
-  padding: 8px 18px;
+.page-number {
+  color: #777;
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  text-align: center;
   margin-right: 8px;
 }
-.page-numbers .page-number:first-child {
+.page-number a {
+  display: block;
+  border: 1px solid #ddd;
+}
+.page-number a:hover {
+  color: #111;
+  border: 1px solid #999;
+}
+.page-number:first-child {
+  color: #111;
   background-color: #eee;
   font-weight: 600;
+  border: 1px solid #ddd;
+}
+.page-number:last-child {
+  width: 72px;
 }
 
 /* フッター箇所 */
@@ -165,42 +197,49 @@ dl dd {
   padding: 120px 0;
 }
 .profile {
-  width: 43%;
+  width: 45%;
 }
-.profile .profile-top {
+.profile-top {
   display: flex;
   align-items: center;
   margin-bottom: 16px;
 }
-.profile .profile-icon img {
+.profile-icon img {
   width: 100px;
   border-radius: 50%;
   margin-right: 16px;
 }
-.profile-top .profile-name {
+.profile-name {
   font-weight: bold;
 }
-.profile .profile-widget-text {
+.profile-widget-text {
   color: #666;
+  font-size: 16px;
+  line-height: 1.7;
+  letter-spacing: 0, 23;
 }
 .footer-widget-table {
   display: flex;
   justify-content: space-between;
-  padding-left: 12%;
+  padding-left: 10%;
   box-sizing: border-box;
 }
-.footer-widget-table .footer-widget1 {
-  width: 27%;
+.footer-widget1 {
+  width: 30%;
 }
-.footer-widget-table .footer-widget-title {
+.footer-widget3 {
+  width: 30%;
+}
+
+.footer-widget-title {
   font-size: 16px;
   padding-bottom: 32px;
 }
-.footer-wrap .footer-widget-title {
+.footer-widget-title {
   font-size: 14px;
 }
 
-.footer-widget1 .footer-widget1-descript {
+.footer-widget1-descript {
   line-height: 1.7;
   color: #666;
 }
@@ -212,21 +251,30 @@ dl dd {
   color: #666;
   font-size: 18px;
 }
+.footer-widget-table ul li a:hover {
+  color: darkgoldenrod;
+}
 
-.footer-widget2 ul li .post-data {
+.post-data {
   display: block;
   color: #999;
   font-size: 14px;
   margin-top: 12px;
 }
-.footer-widget-table .footer-widget3 {
-  width: 27%;
+.footer-widget3 {
+  width: 30%;
 }
-.footer-widget3 .serch-box .serch-text {
+.serch-text {
   color: #666;
   border: 1px solid #ddd;
   padding: 0.6em;
   margin-top: 80px;
+}
+.footer_copy {
+  font-size: 14px;
+  color: #999;
+  text-align: center;
+  margin: 80px auto;
 }
 
 @media screen and (max-width: 980px) {
@@ -237,17 +285,18 @@ dl dd {
   .top-table {
     display: block;
   }
-  .top-table nav {
+  .header_nav {
     margin-top: 40px;
+    width: 100%;
   }
   /* 記事箇所 */
-  main dl {
+  .content {
     display: block;
   }
-  main dl dt .time {
+  .time {
     margin-bottom: 16px;
   }
-  main .page-numbers {
+  .page-numbers ul {
     justify-content: flex-start;
     margin-bottom: 100px;
   }
@@ -264,14 +313,155 @@ dl dd {
     display: block;
     padding-left: 0;
   }
-  .footer-widget-table .footer-widget1 {
+  .footer-widget1 {
     width: 100%;
     margin-bottom: 200px;
   }
-  .footer-widget-table .footer-widget2 {
+  .footer-widget2 {
     margin-bottom: 80px;
   }
-  .footer-widget-table .footer-widget3 {
+  .footer-widget3 {
     width: 50%;
+  }
+  .footer_copy {
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 782px) {
+  .home {
+    margin: 45px 15px;
+    padding: 0;
+  }
+  /* ヘッダー箇所 */
+  .top-title h1 {
+    font-size: 30px;
+  }
+  .top-title h2 {
+    font-size: 15px;
+  }
+  .header-img {
+    margin: 0 -15px;
+    padding: 0 -10px;
+  }
+  .main-description {
+    font-size: 22px;
+  }
+  /* ハンバーガーメニュー */
+  .header_nav {
+    display: none;
+  }
+  .sp_btn {
+    display: block;
+    position: fixed;
+    top: 30px;
+    right: 10px;
+    height: 22px;
+    cursor: pointer;
+    z-index: 100;
+  }
+  .sp_btn span {
+    display: block;
+    background-color: #111;
+    width: 24px;
+    height: 2px;
+    position: relative;
+    top: 10px;
+    transition: 0.2s;
+  }
+  .sp_btn span::before,
+  .sp_btn span::after {
+    content: "";
+    background-color: #111;
+    width: 24px;
+    height: 2px;
+    bottom: 10px;
+    position: absolute;
+    transition: 0.4s;
+  }
+  .sp_btn span::before {
+    bottom: 10px;
+  }
+  .sp_btn span::after {
+    top: 10px;
+  }
+
+  .open span {
+    background-color: transparent;
+  }
+  .open span::before {
+    transform: rotate(45deg);
+    bottom: 0;
+  }
+  .open span::after {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+
+  .sp_header_nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    opacity: 0.8;
+  }
+  .sp_header_nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+  .sp_header_nav li {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 28px;
+  }
+  .sp_header_nav li:nth-child(2),
+  .sp_header_nav li:nth-child(4),
+  .sp_header_nav li:nth-child(5) {
+    font-size: 18px;
+  }
+
+  /* 記事箇所 */
+  .time {
+    font-size: 14px;
+  }
+  .content h2 {
+    font-size: 18px;
+  }
+  .content dd {
+    font-size: 15px;
+  }
+  /* フッター箇所 */
+  .footer-wrap {
+    padding: 70px 10px;
+  }
+  .profile-widget-text {
+    font-size: 14px;
+  }
+  .footer-widget1 {
+    margin-bottom: 150px;
+  }
+  .footer-widget1-descript {
+    font-size: 14px;
+  }
+  .footer-widget-title {
+    font-size: 12px;
+  }
+  .footer-widget-table ul li a {
+    font-size: 15px;
+  }
+  .post-data {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .page-number:nth-child(1),
+  .page-number:nth-child(2),
+  .page-number:nth-child(3) {
+    display: none;
   }
 }
