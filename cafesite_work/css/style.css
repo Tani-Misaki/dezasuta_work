@@ -67,6 +67,7 @@ body {
   left: 0;
   width: 100%;
   box-sizing: border-box;
+  z-index: 70;
 }
 /* スクロールした時のヘッダー */
 .header_scroll {
@@ -103,17 +104,17 @@ body {
   text-align: center;
 }
 .top_main_text {
-  font-size: 2.5vw;
+  font-size: 30px;
 }
 .top_main_head h2 {
-  font-size: 7vw;
+  font-size: 82px;
   font-weight: normal;
   line-height: 1.17;
   letter-spacing: 0.1em;
   padding: 55px 0 50px;
 }
 .top_main_subtext {
-  font-size: 2vw;
+  font-size: 23px;
   line-height: 1.652;
 }
 .sp_top_main_subtext {
@@ -321,6 +322,14 @@ body {
     transform: rotate(135deg);
   }
 
+  /* メイン上 */
+  .top_main_head h2 {
+    font-size: 62px;
+  }
+  .top_main_subtext {
+    font-size: 18px;
+  }
+
   /* ABOUT US箇所 */
   .about_us_ttl {
     font-size: 36px;
@@ -375,14 +384,18 @@ body {
     padding: 0 15px;
   }
   .top_main_head h2 {
+    font-size: 8.6vw;
     padding: 24px 0;
+  }
+  .top_main_text {
+    font-size: 4.5vw;
   }
   .top_main_subtext {
     display: none;
   }
   .sp_top_main_subtext {
     display: block;
-    font-size: 2vw;
+    font-size: 4.2vw;
     line-height: 1.8;
   }
   /* ABOUT US 箇所*/
