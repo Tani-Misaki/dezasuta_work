@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>チャレンジ課題</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="css/style.css" />
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   </head>
   <body>
     <div class="home">
@@ -41,14 +44,24 @@
             <li><a href="">お問い合わせ</a></li>
           </ul>
         </nav>
-
       </header>
+
       <main>
         <div class="header-img">
+          <ul class="slider">
+            <li>
           <img
             src="images/cropped-nicole-honeywill-730102-unsplash.jpg"
-            alt="ヘッダー画像"
-          />
+            alt="ヘッダー画像"/></li>
+                <li>
+                  <img
+                    src="images/firstview03.jpg"
+                    alt="ヘッダー画像"/></li>
+                    <li>
+                      <img
+                        src="images/firstview04.jpg"
+                        alt="ヘッダー画像"/></li>    
+        </ul>
         </div>
         <p class="main-description">
           Writeは文章を書く人のためのミニマルなWordPressテーマです。装飾を極限まで省いたデザインは、あなたの文章を主役にします。
@@ -74,7 +87,6 @@
         </div>
 
           <div class="content">
-
           <dt><p class="time">2018年3月5日</p></dt>
           <div class="entry-title">
             <dt><h2><a href="">引用付きの投稿</a></h2></dt>
@@ -184,9 +196,18 @@
 
     <script>
       $(function(){
+        // スマホハンバーガーメニュー
         $(".sp_btn").click(function(){
           $(".sp_header_nav").fadeToggle();
           $(this).toggleClass("open");
+        });
+          // ファーストビュー画像
+        $(".slider").slick({
+          fade:true,
+          autoplay:true,
+          autoplaySpeed:3000,
+          arrows:false,
+          speed:1000,
         });
       });
     </script>

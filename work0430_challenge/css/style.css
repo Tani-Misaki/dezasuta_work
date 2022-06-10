@@ -1,6 +1,6 @@
 @charset "utf-8";
-/* cssリセット */
 
+/* cssリセット */
 body,
 h1,
 h2,
@@ -43,8 +43,8 @@ img {
   vertical-align: bottom;
   border: none;
 }
-
 /* ここまでcssリセット */
+
 /* ヘッダー箇所 */
 .home {
   margin: 60px auto;
@@ -62,6 +62,7 @@ img {
   font-size: 36px;
   font-weight: 700;
 }
+
 .top-title h2 {
   font-size: 18px;
   font-weight: lighter;
@@ -100,6 +101,24 @@ img {
   color: #777;
   line-height: 1.8;
   margin: 90px auto;
+  /* テキストグラデーション */
+  background: -webkit-linear-gradient(right, #777, #777, #000, #777, #777);
+  background-size: 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textanimate 15s infinite;
+}
+@keyframes textanimate {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
 }
 .sp_header_nav,
 .sp_btn {
@@ -118,6 +137,11 @@ img {
   display: inline-block;
   margin-left: 10px;
   margin-bottom: 5px;
+}
+.header_nav a:hover span:after {
+  border-top: solid 1px darkgoldenrod;
+  border-right: solid 1px darkgoldenrod;
+  transition: 0.3s;
 }
 
 /* 記事箇所 */
@@ -406,6 +430,7 @@ img {
     height: 100vh;
     background-color: #fff;
     opacity: 0.8;
+    z-index: 80;
   }
   .sp_header_nav ul {
     display: flex;
