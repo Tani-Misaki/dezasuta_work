@@ -186,6 +186,30 @@ body {
   font-size: 17px;
   line-height: 1.47;
 }
+/* ギャラリー箇所 */
+.gallery h3 {
+  margin: 82px 0 16px;
+  text-align: center;
+}
+.slick-prev,
+.slick-next {
+  z-index: 40;
+  content: "";
+  border-top: 5px solid #fff;
+  border-right: 5px solid #fff;
+}
+.slick-prev {
+  left: 20%;
+  transform: rotate(225deg);
+}
+.slick-next {
+  right: 20%;
+  transform: rotate(45deg);
+}
+.slick-next:before,
+.slick-prev:before {
+  content: "";
+}
 
 /* イベント箇所 */
 .event h3 {
@@ -444,6 +468,22 @@ body {
     font-weight: normal;
     margin-bottom: 15px;
   }
+  /* ギャラリー箇所 */
+  .gallery_slider img {
+    width: 100%;
+  }
+  .slick-prev,
+  .slick-next {
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+  }
+  .slick-prev {
+    left: 16px;
+  }
+  .slick-next {
+    right: 16px;
+  }
+
   /* イベント箇所 */
   .event_wrap ul {
     padding-right: 10px;
@@ -484,4 +524,19 @@ body {
   .to_top img {
     height: 100px;
   }
+}
+
+/* スライダー調整 */
+.slick-dots {
+  bottom: 20px;
+}
+.slick-dots li.slick-active button:before {
+  color: #fff;
+}
+.slick-dots li button:before {
+  color: #fff;
+}
+/* モーダルウィンドウ */
+.lb-details {
+  display: none;
 }
